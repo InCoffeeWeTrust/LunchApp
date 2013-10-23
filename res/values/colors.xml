@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#B99368</color>       <!--62%op-->
+    <color name="header">#5E4952</color>           <!--100 op-->
+    <color name="searchfield">#FCC468</color>      <!--100 op-->
+    <color name="listcolor">#F8EDC0</color>        <!--50 op / 80 op-->
+    <color name="toast">#5E4952</color>            <!--100 op-->
+    <color name="mulitlinelistdark">#FFB44B</color> <!--100op-->
+    <color name="mulitlinelistlight">#F9DD94</color> <!--100op-->
+</resources>

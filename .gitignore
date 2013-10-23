@@ -27,3 +27,6 @@ proguard/
 *.ipr
 *.iws
 .idea/
+
+# Added by tln02003
+out/
