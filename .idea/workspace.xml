@@ -25,29 +25,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15033bde-c730-498f-8245-f664250e803c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/containers/DailyMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/DayGroup.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesExpandableListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/containers/LocalStorage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/containers/SchoolAndCity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/containers/WeeklyMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/grouprow.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/containers/Dish.java" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/containers/Dish.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/SettingsFragmentActivity.java" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/SettingsFragmentActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/childrow.xml" afterPath="$PROJECT_DIR$/res/layout/childrow.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/favorites.xml" afterPath="$PROJECT_DIR$/res/layout/favorites.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/header.xml" afterPath="$PROJECT_DIR$/res/layout/header.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/search.xml" afterPath="$PROJECT_DIR$/res/layout/search.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/settings.xml" afterPath="$PROJECT_DIR$/res/layout/settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesFragmentActivity.java" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesFragmentActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lunch_app.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/strings.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382086398343" ignored="false" />
-    <file path="/Dummy.txt" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383320861359" ignored="false" />
+    <file path="/Dummy.txt" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383321735006" ignored="false" />
     <file path="/MyActivity.java" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382348804671" ignored="false" />
     <file path="/search_activity.java" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382084696706" ignored="false" />
     <file path="/search.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382346841045" ignored="false" />
@@ -180,10 +164,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SettingsFragmentActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SettingsFragmentActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/SettingsFragmentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="31" selection-start="286" selection-end="286" vertical-scroll-proportion="0.20623916">
+            <state line="13" column="91" selection-start="304" selection-end="304" vertical-scroll-proportion="-5.44">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FavoritesFragmentActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesFragmentActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="72" selection-start="705" selection-end="705" vertical-scroll-proportion="0.4117647">
               <folding />
             </state>
           </provider>
@@ -569,7 +562,11 @@
       <created>1383320871258</created>
       <updated>1383320871258</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updated project">
+      <created>1383321740011</created>
+      <updated>1383321740011</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -590,7 +587,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -598,8 +595,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31015453" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31015453" sideWeight="0.6720086" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32799146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -649,7 +646,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed intellij commit problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated project" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -665,6 +662,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="commit" />
     <MESSAGE value="fixed intellij commit problem" />
+    <MESSAGE value="Updated project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -698,13 +696,6 @@
     <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/ScreenSlidePageActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="13" selection-start="416" selection-end="416" vertical-scroll-proportion="-3.56">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesFragmentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="87" selection-start="826" selection-end="826" vertical-scroll-proportion="-7.52">
           <folding />
         </state>
       </provider>
@@ -768,7 +759,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/SettingsFragmentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="286" selection-end="286" vertical-scroll-proportion="0.20623916">
+        <state line="13" column="91" selection-start="304" selection-end="304" vertical-scroll-proportion="-5.44">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesFragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="72" selection-start="705" selection-end="705" vertical-scroll-proportion="0.4117647">
           <folding />
         </state>
       </provider>

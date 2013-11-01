@@ -1,6 +1,5 @@
 package se.mdh.dva217.incoffeewetrust;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,7 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
+
+import java.util.*;
+import java.util.regex.Pattern;
+
 import android.widget.TextView;
+import se.mdh.dva217.incoffeewetrust.containers.*;
 
 
 /**
@@ -18,104 +22,62 @@ import android.widget.TextView;
  * Time: 10:14 AM
  * To change this template use File | Settings | File Templates.
  */
-public class FavoritesFragmentActivity extends Fragment{
+public class FavoritesFragmentActivity extends Fragment {
 
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.favorites, null);
-
-        ExpandableListView elv = (ExpandableListView) v.findViewById(R.id.favExpandableListView);
-        elv.setAdapter(new FavoritesAdapter());
         return v;
     }
-    public class FavoritesAdapter extends BaseExpandableListAdapter {
 
-        private LayoutInflater inflater;
-        private Context context;
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
+        // http://stackoverflow.com/questions/17636735/expandable-listview-in-fragment
+        ExpandableListView elv = (ExpandableListView) getActivity().findViewById(R.id.favExpandableListView);
 
-        private String[] groups = { "People Names", "Dog Names", "Cat Names", "Fish Names" };
+        FavoritesExpandableListAdapter adapter = new FavoritesExpandableListAdapter(getActivity());
 
-        private String[][] children = {
-                { "Arnold", "Barry", "Chuck", "David" },
-                { "Ace", "Bandit", "Cha-Cha", "Deuce" },
-                { "Fluffy", "Snuggles" },
-                { "Goldy", "Bubbles" }
-        };
+        populateWithDummyData(adapter);
 
-        public FavoritesAdapter (Context context, String[] parent, String[][] children)
-        {
-           this.context = context;
-            this.groups = parent;
-            this.children = children;
-            inflater = LayoutInflater.from(context);
-
-        }
-
-        public FavoritesAdapter ()
-        {
-
-
-        }
-        @Override
-        public int getGroupCount() {
-            return groups.length;
-        }
-
-        @Override
-        public int getChildrenCount(int i) {
-            return children[i].length;
-        }
-
-        @Override
-        public Object getGroup(int i) {
-            return groups[i];
-        }
-
-        @Override
-        public Object getChild(int i, int i1) {
-            return children[i][i1];
-        }
-
-        @Override
-        public long getGroupId(int i) {
-            return i;
-        }
-
-        @Override
-        public long getChildId(int i, int i1) {
-            return i1;
-        }
-
-        @Override
-        public boolean hasStableIds() {
-            return true;
-        }
-
-        @Override
-        public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
-            View v = View.inflate(getActivity(),R.layout.parentrow, null);
-            TextView tv = (TextView)v.findViewById(R.id.laptop);
-            tv.setText("Fisksoppa");
-            //tv.setText(getGroup(i).toString());
-            TextView textView = new TextView(FavoritesFragmentActivity.this.getActivity());
-            textView.setText(getGroup(i).toString());
-            return tv;
-        }
-
-        @Override
-        public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
-            TextView textView = new TextView(FavoritesFragmentActivity.this.getActivity());
-            textView.setText(getChild(i, i1).toString());
-            return textView;
-        }
-
-        @Override
-        public boolean isChildSelectable(int i, int i1) {
-            return true;
-        }
-
+        elv.setAdapter(adapter);
     }
 
+    private static void populateWithDummyData(FavoritesExpandableListAdapter adapter) {
+        SchoolAndCity fryxellska = new SchoolAndCity("Fryxellska skolan", "Västerås");
+        adapter.add(new WeeklyMenu(fryxellska, 44, new String[]{
+                "Sås med pannkaka\nPlättar med falukorv",
+                "Äcklig mat som är god\nVad du vill din sopa",
+                "Äcklig mat som är god\nVad du vill din sopa",
+                "Äcklig mat som är god\nVad du vill din sopa",
+                "Äcklig mat som är god\nVad du vill din sopa"
+        }));
 
+        SchoolAndCity smurf = new SchoolAndCity("Smurfskolan", "Köping");
+        adapter.add(new WeeklyMenu(smurf, 44, new String[]{
+                "aSås med pannkaka\nPlättar med falukorv",
+                "aÄcklig mat som är god\nVad du vill din sopa",
+                "aÄcklig mat som är god\nVad du vill din sopa",
+                "aÄcklig mat som är god\nVad du vill din sopa",
+                "aÄcklig mat som är god\nVad du vill din sopa"
+        }));
+    }
+
+    /*
+    private void populateWithDummyData() {
+        SchoolAndCity fryxellska = new SchoolAndCity("Fryxellska skolan", "Västerås");
+        SchoolAndCity smurf = new SchoolAndCity("Smurfskolan", "Köping");
+        long today = new Date().getTime();
+
+        DayGroup monday = new DayGroup();
+        monday.addSchool(new DailyMenu(fryxellska, "Sås med pannkaka\nPlättar med falukorv", today));
+        monday.addSchool(new DailyMenu(smurf, "Äcklig mat som är god\nVad du vill din sopa", today));
+        groups.add(monday);
+
+        DayGroup tuesday = new DayGroup();
+        tuesday.addSchool(new DailyMenu(fryxellska, "dsakjfSås med pannkaka\nPläasdfttar med falukorv", today + 1000));
+        tuesday.addSchool(new DailyMenu(smurf, "adfsdfÄcklig mat som är god\nasdfVad du vill din sopa", today + 1000));
+        groups.add(tuesday);
+    }
+    */
 }
