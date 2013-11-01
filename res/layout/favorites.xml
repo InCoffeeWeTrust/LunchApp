@@ -10,7 +10,7 @@
     <ExpandableListView
             android:id="@+id/favExpandableListView"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent" />
+            android:layout_height="fill_parent"/>
 
     <TextView
             android:id="@+id/laptop"
