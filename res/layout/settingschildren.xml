@@ -6,12 +6,20 @@
               android:padding="10dp">
 
     <TextView
-            android:id="@+id/subheaders"
-            android:layout_width="wrap_content"
+            android:id="@+id/subheader_even"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-
+            android:background="@color/multilinelistdark"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:paddingLeft="25dp"/>
+    <TextView
+            android:id="@+id/subheader_odd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/multilinelistlight"
+            android:textColor="@color/black"
+            android:textSize="20sp"
             android:paddingLeft="25dp"/>
 
     <!--Android src innehåller bilden på pilen för att se näringsvärde etc...  -->

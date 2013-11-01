@@ -93,8 +93,8 @@ class FavoritesExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(activity);
-        View v = inflater.inflate(R.layout.grouprow, parent, false);
-        TextView tv = (TextView)v.findViewById(R.id.laptop);
+        View v = inflater.inflate(R.layout.parentrow, parent, false);
+        TextView tv = (TextView)v.findViewById(R.id.headers);
         tv.setText(groups.get(groupPosition).getDayAndDateText());
 
         return tv;

@@ -14,7 +14,7 @@
             android:paddingLeft="25dp"
             android:textSize="20sp"
             android:textColor="@color/black"
-            android:background="@color/mulitlinelistdark"
+            android:background="@color/multilinelistdark"
             />
 
     <ImageView
@@ -34,7 +34,7 @@
               android:paddingLeft="25dp"
               android:textColor="@color/black"
               android:textSize="20sp"
-              android:background="@color/mulitlinelistlight"
+              android:background="@color/multilinelistlight"
             />
 
 </LinearLayout>

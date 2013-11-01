@@ -6,7 +6,7 @@
     <color name="searchfield">#FCC468</color>      <!--100 op-->
     <color name="listcolor">#E6D4B0</color>        <!--50 op / 80 op-->
     <color name="toast">#5E4952</color>            <!--100 op-->
-    <color name="mulitlinelistdark">#FFB44B</color> <!--100op-->
-    <color name="mulitlinelistlight">#F9DD94</color> <!--100op-->
+    <color name="multilinelistdark">#FFB44B</color> <!--100op-->
+    <color name="multilinelistlight">#F9DD94</color> <!--100op-->
     <color name="black">#000000</color>
 </resources>
