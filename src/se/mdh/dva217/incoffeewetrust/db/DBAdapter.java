@@ -24,7 +24,10 @@ public class DBAdapter{
     private final String SQLAdress = "www3.idt.mdh.se";
     private final String SQLUserName = "jkr07001";
     private final String SQLUserPassword = "Databas1";
-    private final String DBNAME = "jkr07001_db";
+    private final String DBNAME = "Lunch_AppDB";
+
+
+
 
     private final String connectionString = "jdbc:jtds:sqlserver://"+SQLAdress+";databaseName="+DBNAME+";integratedSecurity=true;";
 
