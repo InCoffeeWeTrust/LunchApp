@@ -20,50 +20,50 @@
             />
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:id="@+id/search_inner_relativelayout"
+                   android:id="@+id/search_inner_relativelayout"
                   android:orientation="horizontal"
                   android:layout_width="match_parent"
                   android:layout_height="match_parent"
                   android:background="@color/background"
             >
 
-        <EditText
-                android:id="@+id/editText_search"
+    <EditText
+            android:id="@+id/editText_search"
 
-                android:layout_below="@+id/spinner_selectState"
-                android:layout_toLeftOf="@+id/spinner_selectState"
-                android:layout_gravity="left|top"
-
-
-                android:layout_weight="5"
+            android:layout_below="@+id/spinner_selectState"
+            android:layout_toLeftOf="@+id/spinner_selectState"
+            android:layout_gravity="left|top"
 
 
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+            android:layout_weight="5"
 
 
-                />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
 
 
-        <se.mdh.dva217.incoffeewetrust.SquareImageView
-                android:id="@+id/imageView_toggle_gps"
-
-                android:layout_below="@id/spinner_selectState"
-                android:layout_toRightOf="@id/editText_search"
+            />
 
 
-                android:layout_weight="1"
+    <se.mdh.dva217.incoffeewetrust.SquareImageView
+            android:id="@+id/imageView_toggle_gps"
 
-                android:clickable="true"
-
-                android:background="@drawable/ic_action_location_off"
-                android:scaleType="centerInside"
-                android:layout_gravity="center_horizontal"
+            android:layout_below="@id/spinner_selectState"
+            android:layout_toRightOf="@id/editText_search"
 
 
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                />
+            android:layout_weight="1"
+
+            android:clickable="true"
+
+            android:background="@drawable/ic_action_location_off"
+            android:scaleType="centerInside"
+            android:layout_gravity="center_horizontal"
+
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            />
 
 
     </LinearLayout>

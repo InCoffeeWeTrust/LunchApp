@@ -3,15 +3,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:padding="10dp">
+              android:padding="10dp" >
 
     <TextView
-            android:id="@+id/laptops"
-            android:layout_width="wrap_content"
+            android:id="@+id/evenRow"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:paddingLeft="25dp"/>
+            android:paddingLeft="25dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:background="@color/mulitlinelistdark"
+            />
 
     <ImageView
             android:id="@+id/delete"
@@ -22,5 +26,15 @@
             android:src="@drawable/ic_launcher"
             android:contentDescription="@string/app_name"/>
     <!--Android src innehåller bilden på pilen för att se näringsvärde etc...  -->
+
+    <TextView android:id="@+id/oddRow"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:paddingLeft="25dp"
+              android:textColor="@color/black"
+              android:textSize="20sp"
+              android:background="@color/mulitlinelistlight"
+            />
 
 </LinearLayout>

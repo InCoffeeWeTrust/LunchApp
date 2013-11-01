@@ -1,7 +1,7 @@
 package se.mdh.dva217.incoffeewetrust.containers;
 
 /**
- * Not a one-to-one mapping of the database table Dishes!
+ * Not a one-to-one mapping of the database table DailyMenu!
  *                                                                                                     e
  * Immutable.
  *
