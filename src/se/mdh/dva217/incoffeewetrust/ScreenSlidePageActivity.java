@@ -3,12 +3,14 @@ package se.mdh.dva217.incoffeewetrust;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v13.app.*;
 
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Window;
+import se.mdh.dva217.incoffeewetrust.db.DBAdapter;
 
 
 public class ScreenSlidePageActivity extends FragmentActivity {
@@ -17,6 +19,7 @@ public class ScreenSlidePageActivity extends FragmentActivity {
      */
     private static final int NUM_PAGES = 3;
 
+    DBAdapter db;
 
 
     /**
@@ -40,6 +43,17 @@ public class ScreenSlidePageActivity extends FragmentActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
 
+        //Remove security to allow networkcommunication on mainthread
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+
+
+        //Instantiate DbAdapter
+        DBAdapter db = new DBAdapter();
+        db.testquery();
+
         //Binds header buttons
         imagebutton_search = (SquareImageView) findViewById(R.id.imageButton_search);
         imagebutton_favorites = (SquareImageView) findViewById(R.id.imageButton_favorites);
@@ -50,6 +64,9 @@ public class ScreenSlidePageActivity extends FragmentActivity {
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getFragmentManager());
         mPager.setAdapter(mPagerAdapter);
+
+
+
 
 
     }

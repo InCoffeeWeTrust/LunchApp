@@ -1,7 +1,9 @@
 package se.mdh.dva217.incoffeewetrust;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +26,8 @@ import se.mdh.dva217.incoffeewetrust.containers.*;
  */
 public class FavoritesFragmentActivity extends Fragment {
 
+    SharedPreferences pref;
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.favorites, null);
         return v;
@@ -32,6 +36,9 @@ public class FavoritesFragmentActivity extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        pref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
 
         // http://stackoverflow.com/questions/17636735/expandable-listview-in-fragment
         ExpandableListView elv = (ExpandableListView) getActivity().findViewById(R.id.favExpandableListView);
