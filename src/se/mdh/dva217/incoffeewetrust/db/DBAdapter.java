@@ -27,23 +27,11 @@ public class DBAdapter{
 
 
     private final String Driver ="net.sourceforge.jtds.jdbc.Driver";
-
-
-
     private final String SQLAdress = "www3.idt.mdh.se";
     private final String SQLUserName = "jkr07001";
     private final String SQLUserPassword = "Databas1";
     private final String DBNAME = "/Lunch_AppDB";
-
-
     private final String connectionString = "jdbc:jtds:sqlserver://"+SQLAdress+";databaseName="+DBNAME+";integratedSecurity=true;";
-
-
-    //private final String connectionString = "jdbc:jtds:sqlserver://"+SQLAdress+DBNAME;
-    //private final String connectionString = "jdbc:sqlserver://"+SQLAdress+";DatabaseName="+DBNAME;
-    //private final String connectionString = "jdbc:jtds:sqlserver://"+SQLAdress+";DatabaseName="+DBNAME;
-
-    //vill vi ha dessa gemensamma eller vill vi passa runt connections och result sets?
 
     private Connection conn = null;
     private Statement stmt = null;
