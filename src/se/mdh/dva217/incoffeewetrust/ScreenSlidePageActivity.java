@@ -56,7 +56,7 @@ public class ScreenSlidePageActivity extends FragmentActivity {
 
 
         //Instantiate DbAdapter
-        DBAdapter db = new DBAdapter();
+        //DBAdapter db = new DBAdapter();
         //db.testquery();
 
         //Binds header buttons

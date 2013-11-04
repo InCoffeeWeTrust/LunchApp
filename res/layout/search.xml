@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/search_outer_linearlayout"
-              android:orientation="vertical"
+              android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@color/background"
@@ -10,65 +10,37 @@
         >
 
     <Spinner
+            android:id="@+id/spinner_selectState"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner_selectState"
+
             android:layout_gravity="top|center"
             android:layout_marginLeft="15sp"
             android:layout_marginRight="15sp"
 
             />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                   android:id="@+id/search_inner_relativelayout"
-                  android:orientation="horizontal"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:background="@color/background"
-            >
-
-    <EditText
+    <AutoCompleteTextView
             android:id="@+id/editText_search"
 
-            android:layout_below="@+id/spinner_selectState"
-            android:layout_toLeftOf="@+id/spinner_selectState"
+            android:layout_below="@id/spinner_selectState"
             android:layout_gravity="left|top"
 
 
             android:layout_weight="5"
+            android:background="@color/listcolor"
+            android:height="40sp"
+            android:textColor="@color/black"
 
 
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-
+            android:paddingLeft="5sp"
+            android:paddingRight="5sp"
             />
 
-
-    <se.mdh.dva217.incoffeewetrust.SquareImageView
-            android:id="@+id/imageView_toggle_gps"
-
-            android:layout_below="@id/spinner_selectState"
-            android:layout_toRightOf="@id/editText_search"
-
-
-            android:layout_weight="1"
-
-            android:clickable="true"
-
-            android:background="@drawable/ic_action_location_off"
-            android:scaleType="centerInside"
-            android:layout_gravity="center_horizontal"
-
-
-            android:layout_width="0dp"
-            android:paddingRight="0dp"
-            android:layout_height="wrap_content"
-            />
-
-
-    </LinearLayout>
-
-</FrameLayout>
+</RelativeLayout>
 
 
