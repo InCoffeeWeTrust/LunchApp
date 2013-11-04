@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/search_outer_linearlayout"
               android:orientation="vertical"
               android:layout_width="match_parent"
@@ -69,6 +69,6 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</FrameLayout>
 
 

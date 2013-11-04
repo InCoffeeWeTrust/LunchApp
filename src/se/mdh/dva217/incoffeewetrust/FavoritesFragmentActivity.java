@@ -13,6 +13,7 @@ import android.widget.ExpandableListView;
 import java.util.*;
 import java.util.regex.Pattern;
 
+import android.widget.TableRow;
 import android.widget.TextView;
 import se.mdh.dva217.incoffeewetrust.containers.*;
 
@@ -27,7 +28,7 @@ import se.mdh.dva217.incoffeewetrust.containers.*;
 public class FavoritesFragmentActivity extends Fragment {
 
     SharedPreferences pref;
-
+    
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.favorites, null);
         return v;
@@ -62,11 +63,11 @@ public class FavoritesFragmentActivity extends Fragment {
 
         SchoolAndCity smurf = new SchoolAndCity("Smurfskolan", "Köping");
         adapter.add(new WeeklyMenu(smurf, 44, new String[]{
-                "aSås med pannkaka\nPlättar med falukorv",
-                "aÄcklig mat som är god\nVad du vill din sopa",
-                "aÄcklig mat som är god\nVad du vill din sopa",
-                "aÄcklig mat som är god\nVad du vill din sopa",
-                "aÄcklig mat som är god\nVad du vill din sopa"
+                "Sås med pannkaka\nPlättar med falukorv",
+                "Äcklig mat som är god\nVad du vill din sopa",
+                "Äcklig mat som är god\nVad du vill din sopa",
+                "Äcklig mat som är god\nVad du vill din sopa",
+                "Äcklig mat som är god\nVad du vill din sopa"
         }));
     }
 

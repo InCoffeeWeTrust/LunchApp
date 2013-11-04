@@ -13,58 +13,63 @@
                   android:layout_width="match_parent"
                   android:layout_height="60sp"
                   android:gravity="center_horizontal"
-                  android:background="@color/header"
-            >
 
+            >
+        <TableRow android:layout_height="match_parent"
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:id="@+id/favorites_row"
+                  android:background="@color/header_active">
             <se.mdh.dva217.incoffeewetrust.SquareImageView
-                    android:id="@+id/imageButton_settings"
+                    android:id="@+id/imageButton_favorites"
                     android:background="@drawable/ic_action_important"
                     android:clickable="true"
 
-                    android:paddingRight="0sp"
-                    android:paddingLeft="0sp"
-
-
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_gravity="left"
-
-
                     android:layout_weight="1"
                     />
+            </TableRow>
 
+        <TableRow android:layout_height="match_parent"
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:id="@+id/search_row"
+                  android:background="@color/header">
             <se.mdh.dva217.incoffeewetrust.SquareImageView
                     android:id="@+id/imageButton_search"
                     android:background="@drawable/ic_action_search"
                     android:clickable="true"
 
-                    android:paddingRight="0sp"
-                    android:paddingLeft="0sp"
-
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_gravity="center_horizontal"
 
                     android:layout_weight="1"
                     />
-
+        </TableRow>
+        <TableRow android:layout_height="match_parent"
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:id="@+id/settings_row"
+                  android:background="@color/header">
             <se.mdh.dva217.incoffeewetrust.SquareImageView
-                    android:id="@+id/imageButton_favorites"
+                    android:id="@+id/imageButton_settings"
                     android:background="@drawable/ic_action_settings"
                     android:clickable="true"
 
-                    android:paddingRight="0sp"
-                    android:paddingLeft="0sp"
-
-
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_gravity="right"
 
                     android:layout_weight="1"
 
                     />
-
+        </TableRow>
     </LinearLayout>
 
 <android.support.v4.view.ViewPager

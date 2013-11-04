@@ -104,16 +104,25 @@ class FavoritesExpandableListAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(activity);
         View v = inflater.inflate(R.layout.childrow, parent, false);
-        if ((childPosition % 2) == 0)
+        boolean newSchool = false;
+        if (newSchool == false)
         {
             TextView tv = (TextView)v.findViewById(R.id.evenRow);
             tv.setText(getChild(groupPosition, childPosition).toString());
+            if (isLastChild == true)
+            {
+                newSchool = true;
+            }
             return tv;
         }
         else
         {
             TextView tv = (TextView)v.findViewById(R.id.oddRow);
             tv.setText(getChild(groupPosition, childPosition).toString());
+            if (isLastChild == true)
+            {
+                newSchool = false;
+            }
             return tv;
         }
     }

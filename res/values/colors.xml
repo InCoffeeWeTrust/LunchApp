@@ -3,6 +3,7 @@
 
     <color name="background">#B99368</color>       <!--62%op-->
     <color name="header">#5E4952</color>           <!--100 op-->
+    <color name="header_active">#6F5A63</color>
     <color name="searchfield">#FCC468</color>      <!--100 op-->
     <color name="listcolor">#E6D4B0</color>        <!--50 op / 80 op-->
     <color name="toast">#5E4952</color>            <!--100 op-->

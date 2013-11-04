@@ -1,13 +1,16 @@
 package se.mdh.dva217.incoffeewetrust;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
+import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 
@@ -20,16 +23,19 @@ import android.widget.TextView;
  */
 public class SettingsFragmentActivity extends Fragment {
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
+
         View v = inflater.inflate(R.layout.settings, null);
 
         ExpandableListView elv = (ExpandableListView) v.findViewById(R.id.settingsExpandableListView);
         elv.setAdapter(new settingsAdapter());
         return v;
     }
-        public class settingsAdapter extends BaseExpandableListAdapter {
+
+    public class settingsAdapter extends BaseExpandableListAdapter {
 
             private String[] groups = { "Hantera favoriter", "Exportera till kalender", "Hantera meddelanden"};
 
