@@ -19,12 +19,9 @@ import android.widget.TableRow;
  */
 public class SearchFragment extends Fragment {
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)
     {
-
         return (ViewGroup) inflater.inflate(R.layout.search,container,false);
     }
 

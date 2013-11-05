@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:descendantFocusability="blocksDescendants"
+        >
+
+    <TextView
+            android:id="@+id/searchlistitem_schoolname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+
+    <se.mdh.dva217.incoffeewetrust.SquareImageView
+            android:id="@+id/searchlistitem_favorites"
+            android:background="@drawable/ic_action_important"
+            android:clickable="true"
+            android:paddingRight="10sp"
+            android:paddingLeft="0sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_weight="1"
+            />
+</LinearLayout>

@@ -1,46 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:id="@+id/search_outer_linearlayout"
-              android:orientation="horizontal"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@color/background"
-
         >
 
-    <Spinner
-            android:id="@+id/spinner_selectState"
 
+    <!--LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="20sp"
+                  android:background="@color/background"
+            >
+
+        <TextView
+                android:id="@+id/debugTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+    </LinearLayout-->
+    <EditText
+            android:id="@+id/search_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:layout_gravity="top|center"
-            android:layout_marginLeft="15sp"
-            android:layout_marginRight="15sp"
-
+            android:hint="@string/search_hint"
             />
-
-    <AutoCompleteTextView
-            android:id="@+id/editText_search"
-
-            android:layout_below="@id/spinner_selectState"
-            android:layout_gravity="left|top"
-
-
-            android:layout_weight="5"
-            android:background="@color/listcolor"
-            android:height="40sp"
-            android:textColor="@color/black"
-
-
+    <ListView
+            android:id="@+id/search_listview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:paddingLeft="5sp"
-            android:paddingRight="5sp"
             />
-
-</RelativeLayout>
+</LinearLayout>
 
 
