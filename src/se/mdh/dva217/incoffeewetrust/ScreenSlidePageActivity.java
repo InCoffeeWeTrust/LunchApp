@@ -7,6 +7,7 @@ import android.os.StrictMode;
 import android.support.v13.app.*;
 
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -41,6 +42,7 @@ public class ScreenSlidePageActivity extends FragmentActivity {
     private TableRow favoritesR;
     private TableRow searchR;
     private TableRow settingsR;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

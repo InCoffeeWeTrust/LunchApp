@@ -31,23 +31,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15033bde-c730-498f-8245-f664250e803c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/se/mdh/dva217/incoffeewetrust/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/se/mdh/dva217/incoffeewetrust/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesExpandableListAdapter.java" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesExpandableListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesFragmentActivity.java" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesFragmentActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/se/mdh/dva217/incoffeewetrust/Manifest.java" afterPath="$PROJECT_DIR$/gen/se/mdh/dva217/incoffeewetrust/Manifest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/se/mdh/dva217/incoffeewetrust/R.java" afterPath="$PROJECT_DIR$/gen/se/mdh/dva217/incoffeewetrust/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/ScreenSlidePageActivity.java" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/ScreenSlidePageActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/SearchFragment.java" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/SearchFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/SettingsFragmentActivity.java" afterPath="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/SettingsFragmentActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/search.xml" afterPath="$PROJECT_DIR$/res/layout/search.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/childrow.xml" afterPath="$PROJECT_DIR$/res/layout/childrow.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lunch_app.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/strings.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382086398343" ignored="false" />
-    <file path="/Dummy.txt" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383567455898" ignored="false" />
+    <file path="/Dummy.txt" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383639703706" ignored="false" />
     <file path="/MyActivity.java" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382348804671" ignored="false" />
     <file path="/search_activity.java" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382084696706" ignored="false" />
     <file path="/search.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382346841045" ignored="false" />
@@ -59,7 +52,7 @@
     <file path="/ScreenSlidePageFragment.java" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382431089323" ignored="false" />
     <file path="/main.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382441686962" ignored="false" />
     <file path="/ScreenSliderPageState.java" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382350659556" ignored="false" />
-    <file path="/ScreenSlidePageActivity.java" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382447315431" ignored="false" />
+    <file path="/ScreenSlidePageActivity.java" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383641347955" ignored="false" />
     <file path="/SearchFragment.java" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382428203707" ignored="false" />
     <file path="/favorites.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1382979392818" ignored="false" />
     <file path="/settings.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383326211637" ignored="false" />
@@ -92,7 +85,7 @@
     <file path="$USER_HOME$/LunchApp/src/se/mdh/dva217/incoffeewetrust/containers/PassDataInterface.java" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383052805194" ignored="false" />
     <file path="$USER_HOME$/LunchApp/res/layout/childrow.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383127775182" ignored="false" />
     <file path="/FavoritesAdapter.java" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383131457975" ignored="false" />
-    <file path="/childrow.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383166766149" ignored="false" />
+    <file path="/childrow.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383645699025" ignored="false" />
     <file path="/settingsparent.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383326392185" ignored="false" />
     <file path="/settingschildren.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383326238719" ignored="false" />
     <file path="$PROJECT_DIR$/../../App/project.properties" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383166048458" ignored="false" />
@@ -101,7 +94,8 @@
     <file path="/parentrow.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383326335952" ignored="false" />
     <file path="$PROJECT_DIR$/../../App/res/layout/childrow.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383166766149" ignored="false" />
     <file path="/a.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383321185354" ignored="false" />
-    <file path="/FavoritesExpandableListAdapter.java" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383327026742" ignored="false" />
+    <file path="/FavoritesExpandableListAdapter.java" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383645619388" ignored="false" />
+    <file path="/grouprow.xml" changelist="15033bde-c730-498f-8245-f664250e803c" time="1383643686299" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +110,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -154,7 +147,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/ScreenSlidePageActivity.java" line="48" class="se.mdh.dva217.incoffeewetrust.ScreenSlidePageActivity" package="se.mdh.dva217.incoffeewetrust">
+      <breakpoint url="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesExpandableListAdapter.java" line="107" class="se.mdh.dva217.incoffeewetrust.FavoritesExpandableListAdapter" package="se.mdh.dva217.incoffeewetrust">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -170,6 +163,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -182,25 +176,61 @@
       <file leaf-file-name="FavoritesExpandableListAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesExpandableListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="18" selection-start="2953" selection-end="2953" vertical-scroll-proportion="0.0">
+            <state line="140" column="66" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FavoritesFragmentActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FavoritesFragmentActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesFragmentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="46" selection-start="483" selection-end="483" vertical-scroll-proportion="0.33333334">
+            <state line="16" column="46" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settingsparent.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/settingsparent.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="48" selection-start="657" selection-end="657" vertical-scroll-proportion="-1.54">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grouprow.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/grouprow.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="58" selection-start="447" selection-end="447" vertical-scroll-proportion="-2.22">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="childrow.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/childrow.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="4" selection-start="693" selection-end="693" vertical-scroll-proportion="-0.88255036">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ScreenSlidePageActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/ScreenSlidePageActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="22" selection-start="1816" selection-end="1825" vertical-scroll-proportion="0.0">
+            <state line="44" column="4" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -209,7 +239,7 @@
       <file leaf-file-name="SettingsFragmentActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/SettingsFragmentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="72" selection-start="2267" selection-end="2267" vertical-scroll-proportion="0.0">
+            <state line="42" column="75" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -242,8 +272,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/lunchapp/SettingsFragmentActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/favorites.xml" />
         <option value="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/lunchapp/FavoritesFragmentActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
@@ -256,8 +284,10 @@
         <option value="$PROJECT_DIR$/res/layout/settingsparent.xml" />
         <option value="$PROJECT_DIR$/res/layout/parentrow.xml" />
         <option value="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/SettingsFragmentActivity.java" />
-        <option value="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesExpandableListAdapter.java" />
         <option value="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/ScreenSlidePageActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/grouprow.xml" />
+        <option value="$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesExpandableListAdapter.java" />
+        <option value="$PROJECT_DIR$/res/layout/childrow.xml" />
       </list>
     </option>
   </component>
@@ -295,10 +325,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -369,6 +395,10 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -404,6 +434,120 @@
       <recent name="se.mdh.dva217.incoffeewetrust" />
       <recent name="" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/res/layout/search.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/ScreenSlidePageActivity.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/db/DBAdapter.java</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager" selected="Android Application.LunchApp">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -612,24 +756,31 @@
       <created>1383321740011</created>
       <updated>1383321740011</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated header">
+      <created>1383567688844</created>
+      <updated>1383567688845</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1590909" sideWeight="0.6752137" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22685888" sideWeight="0.6752137" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3846154" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32649574" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32478634" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -638,14 +789,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30833334" sideWeight="0.6752137" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3080425" sideWeight="0.6752137" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32478634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15929878" sideWeight="0.6735043" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22713415" sideWeight="0.6735043" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -692,7 +840,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated header" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -706,6 +854,7 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Updated header" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -715,11 +864,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/ic_action_chat.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/SquareImageView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="50" selection-start="416" selection-end="416" vertical-scroll-proportion="-9.76" />
@@ -750,33 +894,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/settings.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="50" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/childrow.xml">
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="47" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/settingschildren.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="45" selection-start="690" selection-end="690" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/parentrow.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="32" selection-start="344" selection-end="344" vertical-scroll-proportion="0.3122449">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
@@ -788,50 +932,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/SettingsFragmentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="72" selection-start="2267" selection-end="2267" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/parentrow.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="32" selection-start="344" selection-end="344" vertical-scroll-proportion="0.3122449">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/settingsparent.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="48" selection-start="657" selection-end="657" vertical-scroll-proportion="0.44489795">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesExpandableListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="18" selection-start="2953" selection-end="2953" vertical-scroll-proportion="0.0">
+        <state line="42" column="75" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/ScreenSlidePageActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="22" selection-start="1816" selection-end="1825" vertical-scroll-proportion="0.0">
+        <state line="44" column="4" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesFragmentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="46" selection-start="483" selection-end="483" vertical-scroll-proportion="0.33333334">
+        <state line="16" column="46" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/settingsparent.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="48" selection-start="657" selection-end="657" vertical-scroll-proportion="-1.54">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/grouprow.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="58" selection-start="447" selection-end="447" vertical-scroll-proportion="-2.22">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/se/mdh/dva217/incoffeewetrust/FavoritesExpandableListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="66" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/childrow.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="4" selection-start="693" selection-end="693" vertical-scroll-proportion="-0.88255036">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>

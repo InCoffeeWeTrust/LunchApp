@@ -25,8 +25,8 @@ class FavoritesExpandableListAdapter extends BaseExpandableListAdapter {
     private final List<DayGroup> groups = new ArrayList<DayGroup>();
 
     private final Activity activity;
-
-
+    boolean newSchool = false;
+    int rows = 0;
     FavoritesExpandableListAdapter(Activity owner) {
         this.activity = owner;
 
@@ -104,26 +104,50 @@ class FavoritesExpandableListAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(activity);
         View v = inflater.inflate(R.layout.childrow, parent, false);
-        boolean newSchool = false;
+
         if (newSchool == false)
         {
-            TextView tv = (TextView)v.findViewById(R.id.evenRow);
-            tv.setText(getChild(groupPosition, childPosition).toString());
-            if (isLastChild == true)
+            if (rows == 0)
             {
-                newSchool = true;
+                TextView tv = (TextView)v.findViewById(R.id.schoolnameEven);
+                tv.setText(getChild(groupPosition, childPosition).toString());
+                rows++;
+                return tv;
             }
-            return tv;
+            else
+            {
+                TextView tv = (TextView)v.findViewById(R.id.evenRow);
+                tv.setText(getChild(groupPosition, childPosition).toString());
+                rows++;
+                if (rows == 3)
+                {
+                    newSchool = true;
+                    rows = 0;
+                }
+                return tv;
+            }
         }
         else
         {
-            TextView tv = (TextView)v.findViewById(R.id.oddRow);
-            tv.setText(getChild(groupPosition, childPosition).toString());
-            if (isLastChild == true)
+            if (rows == 0)
             {
-                newSchool = false;
+                TextView tv = (TextView)v.findViewById(R.id.schoolnameOdd);
+                tv.setText(getChild(groupPosition, childPosition).toString());
+                rows++;
+                return tv;
             }
-            return tv;
+            else
+            {
+                TextView tv = (TextView)v.findViewById(R.id.oddRow);
+                tv.setText(getChild(groupPosition, childPosition).toString());
+                rows++;
+                if (rows == 3)
+                {
+                    newSchool = false;
+                    rows = 0;
+                }
+                return tv;
+            }
         }
     }
 
