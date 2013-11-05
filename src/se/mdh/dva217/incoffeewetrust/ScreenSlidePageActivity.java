@@ -12,6 +12,9 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.Window;
 import android.widget.TableRow;
+import android.widget.Toast;
+
+import java.util.Arrays;
 
 
 public class ScreenSlidePageActivity extends FragmentActivity {
@@ -50,6 +53,11 @@ public class ScreenSlidePageActivity extends FragmentActivity {
 
         Databasehelper db = new Databasehelper(this);
 
+        db.addSchool("Bajsskolan");
+
+        String[] s = db.getSchools();
+
+        Toast.makeText(this, Arrays.toString(s),Toast.LENGTH_LONG);
 
 
 

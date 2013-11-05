@@ -1,8 +1,14 @@
 package se.mdh.dva217.incoffeewetrust;
 
+import android.*;
+import android.R;
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -33,7 +39,7 @@ public class Databasehelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE "+schoolTable+" ("+colID+" TEXT PRIMARY KEY )");
-
+            //todo make a primary key relationship between tables schools and weekmenu
        db.execSQL("CREATE TABLE "+menuTable+
                  " ("+colSchoolID+" TEXT PRIMARY KEY, "+
                     colWeekNumber+" INTEGER NOT NULL, "+
@@ -54,5 +60,50 @@ public class Databasehelper extends SQLiteOpenHelper {
     }
 
 
+    public String[] getSchools()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+
+        String selectStatement = "SELECT * FROM "+schoolTable;
+        Cursor cursor = db.rawQuery(selectStatement,null);
+
+        String[] result = new String[cursor.getCount()];
+
+        for (int i = 0; i <result.length ; i++)
+        {
+            cursor.moveToPosition(i);
+            result[i] = cursor.getString(0);
+        }
+
+        return result;
+    }
+
+    public boolean addSchool(String school)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put(colID, school);
+
+
+        //insert returns rowID or -1.
+        long rowID = db.insert(schoolTable,null,values);
+
+
+        return rowID != -1;
+    }
+
+    public boolean addSchools(String... schools)
+    {
+        boolean result = false;
+
+        for(String s:schools)
+        {
+            result |= addSchool(s);
+        }
+
+        return result;
+    }
 
 }
