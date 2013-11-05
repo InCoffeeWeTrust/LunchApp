@@ -40,7 +40,7 @@ public class SettingsFragmentActivity extends Fragment {
             private String[] groups = { "Hantera favoriter", "Exportera till kalender", "Hantera meddelanden"};
 
             private String[][] subheaders = {
-                    { "LeChuck", "Montserrat", "Lafitte", "Lafayette" },
+                    { "Fryxellska skolan", "Fria Gymnasiet", "Barkaröskolan" },
                     { "Bob", "Shadowmere", "Shadowfax", "Mirol" },
                     { "D20", "D12", "D8" },
             };

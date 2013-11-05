@@ -11,11 +11,20 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:paddingLeft="25dp"
+            android:paddingLeft="35dp"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:background="@color/multilinelistdark"
             />
+
+    <TextView android:id="@+id/schoolnameEven"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:paddingLeft="25dp"
+              android:textColor="@color/black"
+              android:textSize="25sp"
+              android:background="@color/multilinelistdark" />
 
     <ImageView
             android:id="@+id/delete"
@@ -31,10 +40,19 @@
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:layout_centerVertical="true"
-              android:paddingLeft="25dp"
+              android:paddingLeft="35dp"
               android:textColor="@color/black"
               android:textSize="20sp"
               android:background="@color/multilinelistlight"
             />
+    <TextView android:id="@+id/schoolnameOdd"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:paddingLeft="25dp"
+              android:textColor="@color/black"
+              android:textSize="25sp"
+              android:background="@color/multilinelistlight" />
+
 
 </LinearLayout>
