@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.support.v13.app.*;
 
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.Window;
 import android.widget.TableRow;
 import android.widget.Toast;
+import se.mdh.dva217.incoffeewetrust.db.Databasehelper;
 
 import java.util.Arrays;
 

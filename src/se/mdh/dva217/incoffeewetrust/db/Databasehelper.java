@@ -1,4 +1,4 @@
-package se.mdh.dva217.incoffeewetrust;
+package se.mdh.dva217.incoffeewetrust.db;
 
 import android.*;
 import android.R;
@@ -32,7 +32,7 @@ public class Databasehelper extends SQLiteOpenHelper {
     static final String colThursday="Thursday";
     static final String colFriday="Friday";
 
-    Databasehelper(Context context) {
+    public Databasehelper(Context context) {
         super(context,dbName,null,33);
     }
 
