@@ -17,24 +17,18 @@ import se.mdh.dva217.incoffeewetrust.db.DatabaseHelper;
 import java.util.Arrays;
 
 
-public class ScreenSlidePageActivity extends FragmentActivity {
-    /**
-     * The number of pages (wizard steps) to show in this demo.
-     */
+public class ScreenSlidePageActivity extends FragmentActivity
+{
+    //The number of pages to show.
     private static final int NUM_PAGES = 3;
 
 
-
-
-    /**
-     * The pager widget, which handles animation and allows swiping horizontally to access previous
-     * and next wizard steps.
-     */
+     //The pager widget, which handles animation and allows swiping horizontally to access previous
+     //and next wizard steps.
     private ViewPager mPager;
 
-    /**
-     * The pager adapter, which provides the pages to the view pager widget.
-     */
+
+    //The pager adapter, which provides the pages to the view pager widget.
     private PagerAdapter mPagerAdapter;
 
     private SquareImageView imagebutton_settings;
