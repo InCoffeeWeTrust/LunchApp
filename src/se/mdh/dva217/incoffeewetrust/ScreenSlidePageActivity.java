@@ -3,7 +3,6 @@ package se.mdh.dva217.incoffeewetrust;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.support.v13.app.*;
 
 import android.support.v4.app.FragmentActivity;
@@ -11,7 +10,6 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.Window;
-import se.mdh.dva217.incoffeewetrust.db.DBAdapter;
 import android.widget.TableRow;
 
 
@@ -21,7 +19,7 @@ public class ScreenSlidePageActivity extends FragmentActivity {
      */
     private static final int NUM_PAGES = 3;
 
-    DBAdapter db;
+
 
 
     /**
@@ -48,16 +46,11 @@ public class ScreenSlidePageActivity extends FragmentActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
 
-        //Remove security to allow networkcommunication on mainthread
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-        }
+        Databasehelper db = new Databasehelper(this);
 
 
-        //Instantiate DbAdapter
-        //DBAdapter db = new DBAdapter();
-        //db.testquery();
+
+
 
         //Binds header buttons
         imagebutton_search = (SquareImageView) findViewById(R.id.imageButton_search);
