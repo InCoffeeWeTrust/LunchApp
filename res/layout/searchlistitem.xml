@@ -6,7 +6,7 @@
               android:layout_width="fill_parent"
               android:layout_height="?android:attr/listPreferredItemHeight"
               android:orientation="horizontal"
-              android:padding="5dip"
+              android:padding="5sp"
               android:descendantFocusability="blocksDescendants"
         >
 
@@ -14,7 +14,7 @@
             android:id="@+id/searchlistitem_schoolname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dip"
+            android:layout_marginLeft="5sp"
             android:singleLine="true"
             android:gravity="left"
             android:layout_weight="0.99"
@@ -24,10 +24,9 @@
     <!--se.mdh.dva217.incoffeewetrust.SquareImageView-->
     <ImageView
             android:id="@+id/searchlistitem_favorites"
-
             android:layout_toRightOf="@id/searchlistitem_schoolname"
             android:clickable="true"
-            android:layout_marginRight="5dip"
+            android:layout_marginRight="5sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="right"

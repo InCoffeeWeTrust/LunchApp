@@ -45,8 +45,8 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
     public static DatabaseHelper getInstance(Context context) {
         if (INSTANCE == null) {
             INSTANCE = new DatabaseHelper(context);
-            INSTANCE.deleteDB(context);
-            INSTANCE.populateDB(context);
+            //INSTANCE.deleteDB(context);
+            //INSTANCE.populateDB(context);
         }
         return INSTANCE;
     }

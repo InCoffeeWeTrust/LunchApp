@@ -1,5 +1,6 @@
 package se.mdh.dva217.incoffeewetrust;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -58,7 +59,7 @@ class FavoritesExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        return groups.get(groupPosition).getChild(childPosition);
+        return groups.get(groupPosition).getChildText(childPosition);
     }
 
     @Override
@@ -83,11 +84,14 @@ class FavoritesExpandableListAdapter extends BaseExpandableListAdapter {
 
         if (v == null) {
             LayoutInflater inflater = LayoutInflater.from(activity);
-            v = inflater.inflate(R.layout.grouprow, parent, false);
+            TextView dayTextView = (TextView)inflater.inflate(R.layout.daygroup, parent, false);
+            dayTextView.setText(groups.get(groupPosition).getDayAndDateText());
+
+            v = dayTextView;
         }
 
-        TextView tv = (TextView)v.findViewById(R.id.laptop);
-        tv.setText(groups.get(groupPosition).getDayAndDateText());
+        //TextView tv = (TextView)v.findViewById(R.id.laptop);
+        //tv.setText(groups.get(groupPosition).getDayAndDateText());
 
         return v;
     }
@@ -98,9 +102,19 @@ class FavoritesExpandableListAdapter extends BaseExpandableListAdapter {
 
         if (v == null) {
             LayoutInflater inflater = LayoutInflater.from(activity);
-            v = inflater.inflate(R.layout.childrow, parent, false);
-        }
 
+            TextView textView;
+            if (childPosition % 2 == 0) {
+                textView = (TextView)inflater.inflate(R.layout.schoollistitem, parent, false);
+                textView.setText(groups.get(groupPosition).getChildText(childPosition));
+                textView.setBackgroundColor(R.color.multilinelistdark);
+            }
+            else {
+                textView = (TextView)inflater.inflate(R.layout.foodlistitem, parent, false);
+                textView.setText(groups.get(groupPosition).getChildText(childPosition));
+            }
+            v = textView;
+        }
         return v;
     }
 

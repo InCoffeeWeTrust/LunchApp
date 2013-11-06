@@ -50,7 +50,7 @@ class DayGroup {
         return schools.length * 2;
     }
 
-    public Object getChild(int childPosition) {
+    public String getChildText(int childPosition) {
         if (childPosition % 2 == 0)
             return schools[childPosition / 2];
         else

@@ -142,8 +142,8 @@ public class SearchFragment extends Fragment {
                         ImageView imageView = (ImageView)view;
 
                         View parent = (View)imageView.getParent();
-                        TextView schooTextView = (TextView)parent.findViewById(R.id.searchlistitem_schoolname);
-                        String schoolName = schooTextView.getText().toString();
+                        TextView schoolTextView = (TextView)parent.findViewById(R.id.searchlistitem_schoolname);
+                        String schoolName = schoolTextView.getText().toString();
 
                         if(!Arrays.asList(storage.getFavorites()).contains(schoolName)) {
                             imageView.setImageResource(R.drawable.star_gold);

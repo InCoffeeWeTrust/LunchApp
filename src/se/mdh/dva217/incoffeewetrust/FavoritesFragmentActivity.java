@@ -8,14 +8,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseExpandableListAdapter;
-import android.widget.ExpandableListView;
+import android.widget.*;
 
 import java.util.*;
 import java.util.regex.Pattern;
 
-import android.widget.TableRow;
-import android.widget.TextView;
 import se.mdh.dva217.incoffeewetrust.containers.*;
 import se.mdh.dva217.incoffeewetrust.db.DatabaseHelper;
 import se.mdh.dva217.incoffeewetrust.db.IStorage;
@@ -52,9 +49,14 @@ public class FavoritesFragmentActivity extends Fragment {
 
                 if (type == IStorage.Type.Favorite || type == IStorage.Type.Menu) {
 
-                    FavoritesExpandableListAdapter adapter = new FavoritesExpandableListAdapter(getActivity(), storage);
+                    //ExpandableListAdapter adapter = new FavoritesExpandableListAdapter(getActivity(), storage);
+                    ExpandableListAdapter adapter = createAdapter(storage);
 
                     elv.setAdapter(adapter);
+
+                    for (int i = 0; i < 5; i++) {
+                        elv.expandGroup(i);
+                    }
                 }
             }
         };
@@ -62,6 +64,71 @@ public class FavoritesFragmentActivity extends Fragment {
 
         // mimic a favorite update to initiate the list adapter
         listener.storageChanged(IStorage.Type.Favorite);
+    }
+
+    private static enum DayNames {
+        Måndag,
+        Tisday,
+        Onsdag,
+        Torsdag,
+        Fredag
+    }
+
+    private SimpleExpandableListAdapter createAdapter(IStorage storage) {
+
+        final String[] favorites = storage.getFavorites();
+
+        // GROUPS
+
+        // A List of Maps. Each entry in the List corresponds to one group in the list. The Maps contain the data for each group, and should include all the entries specified in "groupFrom"
+        List<Map<String, String>> groupData = new ArrayList<Map<String, String>>();
+        for (DayNames day : DayNames.values()) {
+            groupData.add(Collections.singletonMap("date", day.toString()));
+        }
+
+        // resource identifier of a view layout that defines the views for a group. The layout file should include at least those named views defined in "groupTo"
+        int groupLayout = R.layout.favoritesgroupitem;
+
+        // A list of keys that will be fetched from the Map associated with each group.
+        String[] groupFrom = new String[]{"date"};
+
+        // The group views that should display column in the "groupFrom" parameter. These should all be TextViews. The first N views in this list are given the values of the first N columns in the groupFrom parameter.
+        int[] groupTo = new int[]{R.id.date};
+
+        // CHILDREN
+
+        // A List of List of Maps. Each entry in the outer List corresponds to a group (index by group position), each entry in the inner List corresponds to a child within the group (index by child position), and the Map corresponds to the data for a child (index by values in the childFrom array). The Map contains the data for each child, and should include all the entries specified in "childFrom"
+        List<List<Map<String, String>>> childData = new ArrayList<List<Map<String, String>>>();
+        for (DayNames day : DayNames.values()) {
+
+            List<Map<String, String>> menuData = new ArrayList<Map<String, String>>();
+
+            for (String favorite : favorites) {
+                String[] menu = storage.getMenu(favorite, 1);
+
+                Map<String, String> schoolAndDishValues = new HashMap<String, String>();
+                schoolAndDishValues.put("schoolname", " " + favorite);
+                schoolAndDishValues.put("dish", " " + menu[day.ordinal()]);
+
+                menuData.add(schoolAndDishValues);
+            }
+
+            childData.add(menuData);
+        }
+
+        // resource identifier of a view layout that defines the views for a child. The layout file should include at least those named views defined in "childTo"
+        int childLayout = R.layout.favoriteschilditem; //android.R.layout.simple_expandable_list_item_2;
+
+        // A list of keys that will be fetched from the Map associated with each child.
+        String[] childFrom = new String[]{"schoolname", "dish"};
+
+        // The child views that should display column in the "childFrom" parameter. These should all be TextViews. The first N views in this list are given the values of the first N columns in the childFrom parameter.
+        int[] childTo = new int[]{R.id.schoolname, R.id.dish};
+
+        return new SimpleExpandableListAdapter(
+                getActivity(),
+                groupData, groupLayout, groupFrom, groupTo,
+                childData, childLayout, childFrom, childTo);
     }
 
     /*
