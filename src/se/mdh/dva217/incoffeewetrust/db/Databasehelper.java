@@ -288,13 +288,12 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
     public void deleteDB(Context context)
     {
         context.deleteDatabase(dbName);
-
     }
 
     public void populateDB(Context context)
     {
 
-       String[] schoolStringArray = new String[30];
+        String[] schoolStringArray = new String[30];
         schoolStringArray[0] = "Apalbyskolan";
         schoolStringArray[1] = "Barkaröskolan";
         schoolStringArray[2] = "Bjurhovdaskolan";
@@ -325,7 +324,7 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
         schoolStringArray[27] = "Malmabergsskolan";
         schoolStringArray[28] = "Mistelskolan";
         schoolStringArray[29] = "Mälarstrandskolan";
-       addSchools(schoolStringArray);
+        addSchools(schoolStringArray);
 
         String[] menu1 = new String[5];
         String[] menu2 = new String[5];
@@ -398,11 +397,8 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
                 temp = 0;
             }
         }
-
-
-
-
     }
+
     @Override
     public void addListener(Listener listener) {
         listeners.add(listener);

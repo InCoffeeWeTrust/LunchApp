@@ -64,7 +64,6 @@ public class ScreenSlidePageActivity extends FragmentActivity {
 
 
 
-
         //Binds header buttons
         imagebutton_search = (SquareImageView) findViewById(R.id.imageButton_search);
         imagebutton_favorites = (SquareImageView) findViewById(R.id.imageButton_favorites);
