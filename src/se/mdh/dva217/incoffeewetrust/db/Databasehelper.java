@@ -9,6 +9,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.List;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -34,6 +37,9 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
     static final String colThursday="Thursday";
     static final String colFriday="Friday";
 
+
+    private final Set<Listener> listeners = new LinkedHashSet<Listener>();
+
     public DatabaseHelper(Context context) {
         super(context,dbName,null,33);
     }
@@ -52,9 +58,6 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
                     colThursday+" TEXT, "              +
                     colFriday+" TEXT)"
        );
-
-
-
     }
 
     @Override
@@ -106,7 +109,7 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
         return result;
     }
 
-    @Override
+      @Override
     public String[] getMenu(String school, int weekNumber) {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -114,12 +117,16 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
         String selectStatement = "SELECT * FROM "+ menuTable + " WHERE "+colSchoolID+" = '"+school+"'";
         Cursor cursor = db.rawQuery(selectStatement,null);
 
-        String[] result = new String[cursor.getColumnCount()];
+        // todo return null for missing menu?
+        if (cursor.getCount() == 0)
+            return null;
+
+        String[] result = new String[5];
 
         cursor.moveToFirst();
-        for (int i = 0; i <result.length ; i++)
+        for (int i = 0; i < result.length; i++)
         {
-            result[i] = cursor.getString(i);
+            result[i] = cursor.getString(i+2);
         }
 
         cursor.close();
@@ -145,17 +152,21 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
         return rowID != -1;
     }
 
+
     @Override
     public boolean addSchools(String... schools)
     {
-        boolean result = false;
+        boolean changed = false;
 
         for(String s:schools)
         {
-            result |= addSchool(s);
+            changed |= addSchool(s);
         }
 
-        return result;
+        if (changed)
+            notifyListeners(Type.School);
+
+        return changed;
     }
 
     @Override
@@ -168,8 +179,11 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
 
         int updateStatus = db.update(schoolTable, values,colID+" =?",new String[]{school});
 
-
-        return updateStatus != -1;
+        if (updateStatus != -1) {
+            notifyListeners(Type.Favorite);
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -182,30 +196,38 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
 
         int updateStatus = db.update(schoolTable, values, colID + " = ?", new String[]{school});
 
-
-        return updateStatus != -1;
+        if (updateStatus != -1) {
+            notifyListeners(Type.Favorite);
+            return true;
+        }
+        return false;
     }
 
     @Override
-    public void addMenu(String school, int weekNumber, String[] dishes) {
+    public boolean addMenu(String school, int weekNumber, String[] dishes) {
 
         SQLiteDatabase db = getReadableDatabase();
 
-           Cursor cursor = db.rawQuery("SELECT * FROM "+menuTable+" WHERE "+colSchoolID+" = '"+school+"'",null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "+menuTable+" WHERE "+colSchoolID+" = '"+school+"'",null);
 
-
+        boolean changed = false;
         switch (cursor.getCount())
         {
             case 0:
-               cursor.close();
-               insertMenu(school,weekNumber,dishes);
+                cursor.close();
+                changed |= insertMenu(school,weekNumber,dishes);
                 break;
 
             default:
                 cursor.close();
-                updateMenu(school,weekNumber,dishes);
+                changed |=  updateMenu(school,weekNumber,dishes);
                 break;
         }
+
+        if (changed)
+            notifyListeners(Type.Menu);
+
+        return changed;
     }
 
     private boolean insertMenu(String school, int weekNumber, String[] dishes)
@@ -249,7 +271,7 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
     {
         db.execSQL("DROP TABLE IF EXISTS "+schoolTable);
         db.execSQL("DROP TABLE IF EXISTS "+menuTable);
-        //onCreate(db);
+        onCreate(db);
 
     }
 
@@ -260,5 +282,30 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
 
         return cursor.getCount();
     }
+
+
+    public void deleteDB(Context context)
+    {
+        context.deleteDatabase(dbName);
+
+    }
+
+    public void populateDB(Context context)
+    {
+
+       String[] schoolStringArray = new String[30];
+
+       addSchools(schoolStringArray);
+    }
+    @Override
+    public void addListener(Listener listener) {
+        listeners.add(listener);
+    }
+
+    private void notifyListeners(Type type) {
+        for (Listener l : listeners)
+            l.storageChanged(type);
+    }
+
 
 }

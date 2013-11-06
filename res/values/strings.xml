@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">LunchApp</string>
     <string name="gps_toggle">gps</string>
+    <string name="search_hint">Sök skola...</string>
     <string name="monday">Måndag: </string>
     <string name="tuesday">Tisday: </string>
     <string name="wednesday">Onsdag: </string>

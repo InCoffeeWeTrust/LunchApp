@@ -105,7 +105,7 @@ class FavoritesExpandableListAdapter extends BaseExpandableListAdapter {
         LayoutInflater inflater = LayoutInflater.from(activity);
         View v = inflater.inflate(R.layout.childrow, parent, false);
 
-        if (newSchool == false)
+        if (!newSchool)
         {
             if (rows == 0)
             {

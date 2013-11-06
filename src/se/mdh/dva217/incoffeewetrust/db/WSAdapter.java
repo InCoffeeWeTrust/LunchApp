@@ -47,13 +47,12 @@ public class WSAdapter {
     {
         try
         {
-            System.out.println("guru");
             DefaultHttpClient httpClient=new DefaultHttpClient();
 
             //Connect to the server
             HttpGet httpGet=new HttpGet("http://10.0.2.2:51220/Service1.svc/checkLogin?name="+UserName+"&pass="+Password);
 
-            //Get the response
+            //Get    the response
             HttpResponse httpResponse = httpClient.execute(httpGet);
             HttpEntity httpEntity = httpResponse.getEntity();
             InputStream stream=httpEntity.getContent();

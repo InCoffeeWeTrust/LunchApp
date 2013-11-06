@@ -11,6 +11,16 @@ import java.util.*;
  */
 public interface IStorage {
 
+    enum Type {
+        School,
+        Favorite,
+        Menu
+    }
+
+    interface Listener {
+        void storageChanged(Type type);
+    }
+
     // queries
 
     String[] getSchools();
@@ -27,5 +37,7 @@ public interface IStorage {
 
     boolean removeFavorite(String school);
 
-    void  addMenu(String school, int weekNumber, String[] dishes);
+    boolean addMenu(String school, int weekNumber, String[] dishes);
+
+    void addListener(Listener listener);
 }

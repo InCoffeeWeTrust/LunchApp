@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
         android:id="@+id/main_outer_linearlayout"
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,10 +12,8 @@
                   android:id="@+id/header_inner_linearlayout"
                   android:orientation="horizontal"
                   android:layout_width="match_parent"
-                  android:layout_height="60sp"
-                  android:gravity="center_horizontal"
-
-            >
+                  android:layout_height="60dp"
+                  android:gravity="center_horizontal">
         <TableRow android:layout_height="match_parent"
                   android:layout_width="0dp"
                   android:layout_weight="1"
@@ -23,16 +22,15 @@
                   android:background="@color/header_active">
             <se.mdh.dva217.incoffeewetrust.SquareImageView
                     android:id="@+id/imageButton_favorites"
-                    android:background="@drawable/ic_action_important"
+                    android:src="@drawable/ic_action_important"
                     android:clickable="true"
-
+                    android:layout_alignParentTop="true"
                     android:layout_width="0dp"
-                    android:layout_height="fill_parent"
-                    android:layout_gravity="left"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    />
-            </TableRow>
+                    android:layout_gravity="center" android:baselineAlignBottom="false"/>
 
+        </TableRow>
         <TableRow android:layout_height="match_parent"
                   android:layout_width="0dp"
                   android:layout_weight="1"
@@ -43,11 +41,9 @@
                     android:id="@+id/imageButton_search"
                     android:background="@drawable/ic_action_search"
                     android:clickable="true"
-
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_gravity="center_horizontal"
-
                     android:layout_weight="1"
                     />
         </TableRow>
@@ -61,25 +57,22 @@
                     android:id="@+id/imageButton_settings"
                     android:background="@drawable/ic_action_settings"
                     android:clickable="true"
-
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_gravity="right"
-
                     android:layout_weight="1"
-
                     />
         </TableRow>
     </LinearLayout>
 
-<android.support.v4.view.ViewPager
-              android:id="@+id/pager"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-        >
+    <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
 
-</android.support.v4.view.ViewPager>
+    </android.support.v4.view.ViewPager>
 
 
 </LinearLayout>
