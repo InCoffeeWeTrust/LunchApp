@@ -39,5 +39,7 @@ public interface IStorage {
 
     boolean addMenu(String school, int weekNumber, String[] dishes);
 
+    public String[][] getMenusForFavorites();
+
     void addListener(Listener listener);
 }
