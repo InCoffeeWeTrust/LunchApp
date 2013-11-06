@@ -68,7 +68,7 @@ public class FavoritesFragmentActivity extends Fragment {
 
     private static enum DayNames {
         Måndag,
-        Tisday,
+        Tisdag,
         Onsdag,
         Torsdag,
         Fredag
