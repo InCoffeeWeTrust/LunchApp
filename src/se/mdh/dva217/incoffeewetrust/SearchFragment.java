@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.*;
 import se.mdh.dva217.incoffeewetrust.db.DatabaseHelper;
 import se.mdh.dva217.incoffeewetrust.db.IStorage;
@@ -47,7 +48,7 @@ public class SearchFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        storage = new DatabaseHelper(getActivity());
+        storage = DatabaseHelper.getInstance(getActivity());
         /*
         boolean flag = storage.addSchools("Smurfskolan", "Särskrivnings skolan", "Knarkskolan", "Hasch och inbrottskolan",
                 "Androidskolan", "Våldskolan Lundsberg", "Kungliga knarkakademin");
@@ -103,7 +104,7 @@ public class SearchFragment extends Fragment {
             // assign the view we are converting to a local variable
             View v = convertView;
 
-            final String schoolName = getItem(position);
+            //final String schoolName = getItem(position);
 
             // first check to see if the view is null. if so, we have to inflate it.
             // to inflate it basically means to render, or show, the view.
@@ -116,6 +117,9 @@ public class SearchFragment extends Fragment {
                 v.findViewById(R.id.searchlistitem_schoolname).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+
+                        String schoolName = ((TextView)view).getText().toString();
+
                         Intent menuIntent = new Intent(getActivity(), SingleMenuActivity.class);
                         menuIntent.putExtra("schoolName", schoolName);
                         //String[] menu = new String[]{"one", "pannkana", "ASDF asd sdf as", "sdfa ssda fsdf  sdfdasfa", "sdfdsafdfasdfsDSFASFDf sdfsdf"};
@@ -136,6 +140,10 @@ public class SearchFragment extends Fragment {
                     @Override
                     public void onClick(View view) {
                         ImageView imageView = (ImageView)view;
+
+                        View parent = (View)imageView.getParent();
+                        TextView schooTextView = (TextView)parent.findViewById(R.id.searchlistitem_schoolname);
+                        String schoolName = schooTextView.getText().toString();
 
                         if(!Arrays.asList(storage.getFavorites()).contains(schoolName)) {
                             imageView.setImageResource(R.drawable.star_gold);
@@ -159,11 +167,11 @@ public class SearchFragment extends Fragment {
                 });
             }
 
-		    // Recall that the variable position is sent in as an argument to this method.
-	    	// The variable simply refers to the position of the current object in the list. (The ArrayAdapter
-	    	// iterates through the list we sent it)
+            // Recall that the variable position is sent in as an argument to this method.
+            // The variable simply refers to the position of the current object in the list. (The ArrayAdapter
+            // iterates through the list we sent it)
 
-            // cache favorites?
+            String schoolName = getItem(position);
 
             TextView nameView = (TextView)v.findViewById(R.id.searchlistitem_schoolname);
             nameView.setText(schoolName);

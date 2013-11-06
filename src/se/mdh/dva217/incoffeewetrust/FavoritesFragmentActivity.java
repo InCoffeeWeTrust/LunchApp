@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import java.util.regex.Pattern;
 import android.widget.TableRow;
 import android.widget.TextView;
 import se.mdh.dva217.incoffeewetrust.containers.*;
+import se.mdh.dva217.incoffeewetrust.db.DatabaseHelper;
+import se.mdh.dva217.incoffeewetrust.db.IStorage;
 
 
 /**
@@ -27,8 +30,6 @@ import se.mdh.dva217.incoffeewetrust.containers.*;
  */
 public class FavoritesFragmentActivity extends Fragment {
 
-    SharedPreferences pref;
-    
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.favorites, null);
         return v;
@@ -38,19 +39,32 @@ public class FavoritesFragmentActivity extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        pref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-
-
         // http://stackoverflow.com/questions/17636735/expandable-listview-in-fragment
-        ExpandableListView elv = (ExpandableListView) getActivity().findViewById(R.id.favExpandableListView);
+        final ExpandableListView elv = (ExpandableListView) getActivity().findViewById(R.id.favExpandableListView);
 
-        FavoritesExpandableListAdapter adapter = new FavoritesExpandableListAdapter(getActivity());
+        final IStorage storage = DatabaseHelper.getInstance(getActivity());
 
-        populateWithDummyData(adapter);
+        IStorage.Listener listener = new IStorage.Listener() {
+            @Override
+            public void storageChanged(IStorage.Type type) {
 
-        elv.setAdapter(adapter);
+                Log.d("favorites_storageChanged", type.toString());
+
+                if (type == IStorage.Type.Favorite || type == IStorage.Type.Menu) {
+
+                    FavoritesExpandableListAdapter adapter = new FavoritesExpandableListAdapter(getActivity(), storage);
+
+                    elv.setAdapter(adapter);
+                }
+            }
+        };
+        storage.addListener(listener);
+
+        // mimic a favorite update to initiate the list adapter
+        listener.storageChanged(IStorage.Type.Favorite);
     }
 
+    /*
     private static void populateWithDummyData(FavoritesExpandableListAdapter adapter) {
         SchoolAndCity fryxellska = new SchoolAndCity("Fryxellska skolan", "Västerås");
         adapter.add(new WeeklyMenu(fryxellska, 44, new String[]{

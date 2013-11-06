@@ -39,9 +39,21 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
     static final String colFriday="Friday";
 
 
+    private static DatabaseHelper INSTANCE;
+
+    // todo make thread safe?
+    public static DatabaseHelper getInstance(Context context) {
+        if (INSTANCE == null) {
+            INSTANCE = new DatabaseHelper(context);
+            INSTANCE.deleteDB(context);
+            INSTANCE.populateDB(context);
+        }
+        return INSTANCE;
+    }
+
     private final Set<Listener> listeners = new LinkedHashSet<Listener>();
 
-    public DatabaseHelper(Context context) {
+    private DatabaseHelper(Context context) {
         super(context,dbName,null,33);
     }
 
@@ -49,16 +61,16 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE "+schoolTable+" ("+colID+" TEXT PRIMARY KEY, "+colFavorite+" INTEGER NOT NULL)");
 
-            //todo make a primary key relationship between tables schools and weekmenu
+        //todo make a primary key relationship between tables schools and weekmenu
         db.execSQL("CREATE TABLE "+menuTable+
-                 " ("+colSchoolID+" TEXT PRIMARY KEY, "+
-                    colWeekNumber+" INTEGER NOT NULL, "+
-                    colMonday+" TEXT, "                +
-                    colTuesday+" TEXT, "               +
-                    colWednesday+" TEXT, "             +
-                    colThursday+" TEXT, "              +
-                    colFriday+" TEXT)"
-       );
+                " ("+colSchoolID+" TEXT PRIMARY KEY, "+
+                colWeekNumber+" INTEGER NOT NULL, "+
+                colMonday+" TEXT, "                +
+                colTuesday+" TEXT, "               +
+                colWednesday+" TEXT, "             +
+                colThursday+" TEXT, "              +
+                colFriday+" TEXT)"
+        );
     }
 
     @Override
@@ -110,7 +122,7 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
         return result;
     }
 
-      @Override
+    @Override
     public String[] getMenu(String school, int weekNumber) {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -135,7 +147,6 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
 
 
     }
-
 
     public String[][] getMenusForFavorites()
     {

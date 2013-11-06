@@ -14,6 +14,50 @@ import java.util.regex.Pattern;
  * Time: 23:58
  * To change this template use File | Settings | File Templates.
  */
+
+
+class DayGroup {
+
+    private static enum DayNames {
+        Måndag,
+        Tisday,
+        Onsdag,
+        Torsdag,
+        Fredag
+    }
+
+    private int day;
+    private String[] schools;
+    private String[][] menus;
+
+    DayGroup(int day, String[] schools, String[][] menus) {
+        this.day = day;
+        this.schools = schools;
+        this.menus = menus;
+
+        // http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html
+        //return new SimpleDateFormat("E d M").format(date);
+
+        //DateFormat df = DateFormat.getDateInstance(DateFormat.FULL, new Locale("sv_SE"));
+        //dateText = df.format(new Date(date));
+    }
+
+    String getDayAndDateText() {
+        return DayNames.values()[day].toString();
+    }
+
+    int getChildrenCount() {
+        return schools.length * 2;
+    }
+
+    public Object getChild(int childPosition) {
+        if (childPosition % 2 == 0)
+            return schools[childPosition / 2];
+        else
+            return menus[childPosition / 2][day];
+    }
+}
+/*
 class DayGroup implements Comparable<DayGroup> {
 
     private static final Pattern NEW_LINE_REGEX = Pattern.compile("\n");
@@ -25,7 +69,7 @@ class DayGroup implements Comparable<DayGroup> {
             return lhs.getSchoolAndCity().compareTo(rhs.getSchoolAndCity());
         }
     };
-    */
+    /
 
     private final Collection<DailyMenu> dailyMenus = new ArrayList<DailyMenu>();//COMPARATOR);
 
@@ -88,3 +132,4 @@ class DayGroup implements Comparable<DayGroup> {
         return (int)(date - another.date);
     }
 }
+*/
