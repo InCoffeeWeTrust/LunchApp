@@ -5,6 +5,7 @@ import android.R;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.CursorIndexOutOfBoundsException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -294,8 +295,113 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
     {
 
        String[] schoolStringArray = new String[30];
-
+        schoolStringArray[0] = "Apalbyskolan";
+        schoolStringArray[1] = "Barkaröskolan";
+        schoolStringArray[2] = "Bjurhovdaskolan";
+        schoolStringArray[3] = "Blåsboskolan";
+        schoolStringArray[4] = "Brandthovdaskolan";
+        schoolStringArray[5] = "Bäckbyskolan";
+        schoolStringArray[6] = "Centuriaskolan";
+        schoolStringArray[7] = "Dingtunaskolan";
+        schoolStringArray[8] = "Ekbergaskolan";
+        schoolStringArray[9] = "Ekebyskolan";
+        schoolStringArray[10] = "Emausskolan";
+        schoolStringArray[11] = "Entréskolan";
+        schoolStringArray[12] = "Fredriksbergsskolan";
+        schoolStringArray[13] = "Fridnässkolan";
+        schoolStringArray[14] = "Fryxellska skolan";
+        schoolStringArray[15] = "Grundskolan Äventyret";
+        schoolStringArray[16] = "Hagabergskolan";
+        schoolStringArray[17] = "Hammarbyskolan";
+        schoolStringArray[18] = "Hamreskolan";
+        schoolStringArray[19] = "Herrgärdsskolan";
+        schoolStringArray[20] = "Håkantorpsskolan";
+        schoolStringArray[21] = "Hällbyskolan";
+        schoolStringArray[22] = "Hökåsenskolan";
+        schoolStringArray[23] = "Irstaskolan";
+        schoolStringArray[24] = "Kristiansborgsskolan";
+        schoolStringArray[25] = "Kunskapsskolan";
+        schoolStringArray[26] = "Lövängsskolan";
+        schoolStringArray[27] = "Malmabergsskolan";
+        schoolStringArray[28] = "Mistelskolan";
+        schoolStringArray[29] = "Mälarstrandskolan";
        addSchools(schoolStringArray);
+
+        String[] menu1 = new String[5];
+        String[] menu2 = new String[5];
+        String[] menu3 = new String[5];
+        String[] menu4 = new String[5];
+        String[] menu5 = new String[5];
+
+
+        menu1[0] = "Fiskgratäng med örter, Potatis";
+        menu1[1] = "Kyckling i currysås, ris";
+        menu1[2] = "Linssoppa";
+        menu1[3] = "Kassler med ananas och ost, ris";
+        menu1[4] = "Köttfärssås, pasta";
+
+        menu2[0] = "Mexikansk fiskgratäng med potatismos";
+        menu2[1] = "Kassler med klyftpotatis och rhodeislandsås";
+        menu2[2] = "Pannkaka med sylt";
+        menu2[3] = "Dallasgryta med ris";
+        menu2[4] = "Pastagrastäng med kyckling";
+
+        menu3[0] = "Falukorv och makaroner, hemgjord ketchup";
+        menu3[1] = "Pasta Bolognese";
+        menu3[2] = "Krämig tomatsoppa med bacon, hembakat surdegsbröd, frukt";
+        menu3[3] = "Fiskpinnar på sejrygg, kokt potatis och kall citronsås";
+        menu3[4] = "Kyckling curry och ris";
+
+        menu4[0] = "Potatisgratäng med kalkon";
+        menu4[1] = "Panerad fisk, kokt potatis och kall sås";
+        menu4[2] = "Pannkaka, sylt och keso";
+        menu4[3] = "Cowboy-soppa, mjukt bröd med ost";
+        menu4[4] = "Världspasta-dagen: Grönsakslasagne";
+
+        menu5[0] = "Ugnstekt kassler, kall vitlökssås och ris";
+        menu5[1] = "Monas fiskgratäng , kokt potatis";
+        menu5[2] = "Broccolisoppa,pannkakor och sylt ";
+        menu5[3] = "Spagetti och köttfärssås";
+        menu5[4] = "Kycklingwok med ris";
+
+        int temp = 0;
+        for (String s : schoolStringArray) {
+
+            switch (temp)
+            {
+                case 0:
+                    addMenu(s,0,menu1);
+                    break;
+
+                case 1:
+                    addMenu(s,0,menu2);
+                    break;
+
+                case 2:
+                    addMenu(s,0,menu3);
+                    break;
+
+                case 3:
+                    addMenu(s,0,menu4);
+                    break;
+
+                case 4:
+                    addMenu(s,0,menu5);
+                    break;
+
+                default:
+                    throw new ArrayIndexOutOfBoundsException(temp);
+            }
+            temp++;
+            if(temp > 4)
+            {
+                temp = 0;
+            }
+        }
+
+
+
+
     }
     @Override
     public void addListener(Listener listener) {
