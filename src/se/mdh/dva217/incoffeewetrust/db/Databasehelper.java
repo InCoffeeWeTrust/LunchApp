@@ -136,6 +136,20 @@ public class DatabaseHelper extends SQLiteOpenHelper implements IStorage {
 
     }
 
+
+    public String[][] getMenusForFavorites()
+    {
+        String[] favorites = getFavorites();
+
+        String[][] result = new String[favorites.length][];
+        for (int i = 0; i < favorites.length; i++) {
+
+            result[i] = getMenu(favorites[i],0);
+
+        }
+        return result;
+    }
+
     private boolean addSchool(String school)
     {
         SQLiteDatabase db = this.getWritableDatabase();
