@@ -10,4 +10,5 @@
     <color name="multilinelistdark">#FFB44B</color> <!--100op-->
     <color name="multilinelistlight">#F9DD94</color> <!--100op-->
     <color name="black">#000000</color>
+    <color name="grey">#333333</color>
 </resources>

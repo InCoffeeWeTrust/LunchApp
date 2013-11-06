@@ -6,29 +6,35 @@ import android.os.Bundle;
 import android.support.v13.app.*;
 
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.Window;
 import android.widget.TableRow;
 import android.widget.Toast;
-import se.mdh.dva217.incoffeewetrust.db.DatabaseHelper;
 
 import java.util.Arrays;
 
 
-public class ScreenSlidePageActivity extends FragmentActivity
-{
-    //The number of pages to show.
+public class ScreenSlidePageActivity extends FragmentActivity {
+    /**
+     * The number of pages (wizard steps) to show in this demo.
+     */
     private static final int NUM_PAGES = 3;
 
 
-     //The pager widget, which handles animation and allows swiping horizontally to access previous
-     //and next wizard steps.
+
+
+    /**
+     * The pager widget, which handles animation and allows swiping horizontally to access previous
+     * and next wizard steps.
+     */
     private ViewPager mPager;
 
-
-    //The pager adapter, which provides the pages to the view pager widget.
+    /**
+     * The pager adapter, which provides the pages to the view pager widget.
+     */
     private PagerAdapter mPagerAdapter;
 
     private SquareImageView imagebutton_settings;
@@ -37,6 +43,9 @@ public class ScreenSlidePageActivity extends FragmentActivity
     private TableRow favoritesR;
     private TableRow searchR;
     private TableRow settingsR;
+    private View favSep;
+    private View searchSep;
+    private View settSep;
 
 
     @Override
@@ -44,6 +53,16 @@ public class ScreenSlidePageActivity extends FragmentActivity
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
+        /*
+        Databasehelper db = new Databasehelper(this);
+
+        db.addSchool("Bajsskolan");
+
+        String[] s = db.getSchools();
+
+        Toast.makeText(this, Arrays.toString(s),Toast.LENGTH_LONG);  */
+
+
 
 
         //Binds header buttons
@@ -85,14 +104,18 @@ public class ScreenSlidePageActivity extends FragmentActivity
 
             @Override
             public void onPageSelected(int i) {
-
+                settSep = (View)findViewById(R.id.sett_separator);
+                favSep = (View)findViewById(R.id.fav_separator);
+                searchSep = (View)findViewById(R.id.ser_separator);
                 settingsR =(TableRow)findViewById(R.id.settings_row);
                 favoritesR = (TableRow)findViewById(R.id.favorites_row);
                 searchR = (TableRow)findViewById(R.id.search_row);
                 switch (i){
                     case 0:
                     {
-
+                        favSep.setVisibility(View.VISIBLE);
+                        settSep.setVisibility(View.INVISIBLE);
+                        searchSep.setVisibility(View.INVISIBLE);
                         settingsR.setBackgroundResource(R.color.header);
                         favoritesR.setBackgroundResource(R.color.header_active);
                         searchR.setBackgroundResource(R.color.header);
@@ -100,6 +123,9 @@ public class ScreenSlidePageActivity extends FragmentActivity
                     }
                     case 1:
                     {
+                        favSep.setVisibility(View.INVISIBLE);
+                        settSep.setVisibility(View.INVISIBLE);
+                        searchSep.setVisibility(View.VISIBLE);
                         settingsR.setBackgroundResource(R.color.header);
                         favoritesR.setBackgroundResource(R.color.header);
                         searchR.setBackgroundResource(R.color.header_active);
@@ -107,6 +133,9 @@ public class ScreenSlidePageActivity extends FragmentActivity
                     }
                     case 2:
                     {
+                        favSep.setVisibility(View.INVISIBLE);
+                        settSep.setVisibility(View.VISIBLE);
+                        searchSep.setVisibility(View.INVISIBLE);
                         settingsR.setBackgroundResource(R.color.header_active);
                         favoritesR.setBackgroundResource(R.color.header);
                         searchR.setBackgroundResource(R.color.header);
