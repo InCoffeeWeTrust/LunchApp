@@ -53,16 +53,6 @@ public class ScreenSlidePageActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
-        /*
-        Databasehelper db = new Databasehelper(this);
-
-        db.addSchool("Bajsskolan");
-
-        String[] s = db.getSchools();
-
-        Toast.makeText(this, Arrays.toString(s),Toast.LENGTH_LONG);  */
-
-
 
         //Binds header buttons
         imagebutton_search = (SquareImageView) findViewById(R.id.imageButton_search);
